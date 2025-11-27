@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Baraka Gas Ltd - Corporate Website
 
-## Getting Started
+Official corporate website for **Baraka Gas Ltd**, Kenya's trusted LPG provider.
 
-First, run the development server:
+## 🚀 Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This is a modern, industry-standard corporate portal built with Next.js 15, featuring:
+- **Comprehensive LPG product catalog** (6kg, 13kg, 50kg cylinders)
+- **B2B bulk supply solutions** (Propane, Butane, Propylene)
+- **Safety-first approach** with emergency response features
+- **Regulatory compliance** (EPRA, KEBS certifications)
+- **Customer trust elements** (testimonials, statistics, certifications)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4 + Shadcn/UI
+- **Animations**: Framer Motion
+- **Forms**: React Hook Form + Zod
+- **Icons**: Lucide React
+- **Theme**: next-themes (Dark Mode support)
+
+## 📁 Project Structure
+
+```
+baraka-gas-ltd/
+├── app/                    # Next.js app router pages
+│   ├── about/             # Company information
+│   ├── bulk-lpg/          # B2B solutions
+│   ├── contact/           # Contact form & locations
+│   ├── products/          # Product catalog
+│   ├── safety/            # Safety guidelines & downloads
+│   └── ...
+├── components/            # Reusable React components
+│   ├── home/             # Homepage sections
+│   ├── layout/           # Header, Footer, FAB, Emergency Banner
+│   ├── products/         # Product showcase components
+│   ├── safety/           # Safety & download components
+│   └── ui/               # Shadcn/UI components
+├── public/
+│   ├── images/           # Product photos, infrastructure images
+│   └── downloads/        # PDFs (MSDS, manuals, certificates)
+└── lib/                  # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Branding
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Color Palette:**
+- **Primary**: Warm Yellow (`#FFC107`) - Energy and optimism
+- **Secondary**: Flame Blue (`#0D47A1`) - Trust and stability
+- **Accent**: Baraka Green (`#2E7D32`) - Safety and eco-friendliness
+- **Destructive**: Energy Red (`#D32F2F`) - Heat and power
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Typography:** Plus Jakarta Sans (Google Fonts)
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+### Industry-Standard Compliance
+- ✅ **Emergency Banner**: 24/7 hotline on all pages
+- ✅ **Regulatory Badges**: EPRA & KEBS certifications in footer
+- ✅ **Download Center**: 9 industry-standard documents
+  - Safety & Emergency (MSDS, Emergency Guide, Safety Poster)
+  - Technical Manuals (Installation, Maintenance, Specs)
+  - Compliance (EPRA License, KEBS Cert, Corporate Profile)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Customer Trust Elements
+- ✅ **Testimonials**: Real customer reviews with star ratings
+- ✅ **Statistics Counter**: Animated stats (7+ Years, 5000+ Customers, etc.)
+- ✅ **Real Photography**: Actual company assets (fleet, storage, team)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### User Experience
+- ✅ **Dark Mode**: System-aware theme switching
+- ✅ **Floating Action Button**: Quick access to WhatsApp, Call, App Install
+- ✅ **Interactive Product Showcase**: 3D-style cylinder rotation
+- ✅ **Responsive Design**: Mobile-first approach
 
-## Deploy on Vercel
+## 🚦 Getting Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Prerequisites
+- Node.js 18+ 
+- npm/yarn/pnpm
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## 📋 Remaining Tasks
+
+See [`task.md`](/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/task.md) for detailed progress tracking.
+
+**High Priority:**
+- [ ] Create actual PDFs (templates in `/public/downloads/README.md`)
+- [ ] Add FAQ section to Contact page
+- [ ] Implement JSON-LD structured data for SEO
+
+**Medium Priority:**
+- [ ] Accessibility audit (WCAG 2.1 AA)
+- [ ] Live chat widget integration
+- [ ] Performance optimization (Lighthouse 90+)
+
+## 📄 Documentation
+
+- **Task Tracking**: `/.gemini/antigravity/brain/.../task.md`
+- **Implementation Plan**: `/.gemini/antigravity/brain/.../implementation_plan.md`
+- **Walkthrough**: `/.gemini/antigravity/brain/.../walkthrough.md`
+- **PDF Templates**: `/public/downloads/README.md`
+
+## 🔗 Important Links
+
+- **Live Site**: [barakagas.com](https://barakagas.com)
+- **Emergency Hotline**: +254 721 489 755
+- **Email**: info@barakagas.com
+
+## 👨‍💻 Developer
+
+Designed and developed by **XP-XG**  
+Contact: [WhatsApp](https://wa.me/254735644100)
+
+## 📜 License
+
+Proprietary - © 2024 Baraka Gas Ltd. All rights reserved.
+# baraka-gas
