@@ -1,0 +1,30 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  
+  <!-- Burner base -->
+  <ellipse cx="200" cy="250" rx="90" ry="20" fill="#d4af37"/>
+  <ellipse cx="200" cy="250" rx="80" ry="18" fill="#f4d03f"/>
+  
+  <!-- Burner cap -->
+  <ellipse cx="200" cy="200" rx="70" ry="15" fill="#d4af37"/>
+  
+  <!-- Flame spreader holes -->
+  <circle cx="170" cy="200" r="8" fill="#34495e"/>
+  <circle cx="200" cy="195" r="8" fill="#34495e"/>
+  <circle cx="230" cy="200" r="8" fill="#34495e"/>
+  <circle cx="185" cy="210" r="6" fill="#34495e"/>
+  <circle cx="215" cy="210" r="6" fill="#34495e"/>
+  
+  <!-- Center nozzle -->
+  <circle cx="200" cy="200" r="15" fill="#95a5a6"/>
+  <circle cx="200" cy="200" r="8" fill="#34495e"/>
+  
+  <!-- Burner ring -->
+  <ellipse cx="200" cy="230" rx="75" ry="12" fill="#d4af37"/>
+  <ellipse cx="200" cy="230" rx="65" ry="10" fill="#34495e" opacity="0.3"/>
+  
+  <!-- Product name -->
+  <text x="200" y="320" font-family="Arial, sans-serif" font-size="18" fill="#2c3e50" text-anchor="middle" font-weight="bold">Brass Burner Head</text>
+  <text x="200" y="345" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">Replacement Part</text>
+</svg>

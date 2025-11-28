@@ -1,0 +1,22 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  
+  <!-- Stand base -->
+  <ellipse cx="200" cy="320" rx="80" ry="15" fill="#2c3e50"/>
+  
+  <!-- Stand legs -->
+  <rect x="180" y="200" width="10" height="120" fill="#34495e"/>
+  <rect x="210" y="200" width="10" height="120" fill="#34495e"/>
+  
+  <!-- Stand ring holder -->
+  <ellipse cx="200" cy="200" rx="60" ry="12" fill="#34495e"/>
+  <ellipse cx="200" cy="200" rx="50" ry="10" fill="#f8f9fa"/>
+  
+  <!-- Cylinder outline (示意) -->
+  <rect x="160" y="80" width="80" height="140" rx="40" fill="#e74c3c" opacity="0.3"/>
+  <ellipse cx="200" cy="80" rx="40" ry="8" fill="#c0392b" opacity="0.3"/>
+  
+  <!-- Product name -->
+  <text x="200" y="370" font-family="Arial, sans-serif" font-size="18" fill="#2c3e50" text-anchor="middle" font-weight="bold">Gas Cylinder Stand</text>
+</svg>
