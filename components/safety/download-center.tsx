@@ -87,10 +87,9 @@ export function DownloadCenter() {
                 </div>
 
                 <Tabs defaultValue="safety" className="w-full">
-                    <TabsList className="grid w-full grid-cols-3 mb-8">
+                    <TabsList className="grid w-full grid-cols-2 mb-8">
                         <TabsTrigger value="safety">Safety & Emergency</TabsTrigger>
                         <TabsTrigger value="technical">Technical Manuals</TabsTrigger>
-                        <TabsTrigger value="compliance">Compliance & Certs</TabsTrigger>
                     </TabsList>
 
                     <TabsContent value="safety">
@@ -104,14 +103,6 @@ export function DownloadCenter() {
                     <TabsContent value="technical">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {documentCategories.technical.map((doc, index) => (
-                                <DocumentCard key={index} doc={doc} />
-                            ))}
-                        </div>
-                    </TabsContent>
-
-                    <TabsContent value="compliance">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {documentCategories.compliance.map((doc, index) => (
                                 <DocumentCard key={index} doc={doc} />
                             ))}
                         </div>
