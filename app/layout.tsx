@@ -7,6 +7,7 @@ import { FloatingActionButton } from "@/components/layout/fab";
 import { EmergencyBanner } from "@/components/layout/emergency-banner";
 import { ScrollToTop } from "@/components/layout/scroll-to-top";
 import { ThemeProvider } from "@/components/theme-provider";
+import { OrganizationSchema } from "@/components/seo/organization-schema";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -54,65 +55,13 @@ export default function RootLayout({
         {/* Skip to content for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[70] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[70] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:semibold"
         >
           Skip to main content
         </a>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Baraka Gas Ltd",
-              url: "https://barakagas.com",
-              logo: "https://barakagas.com/images/logo.jpg",
-              description: "Leading provider of safe, reliable, and affordable LPG solutions in Kenya.",
-              foundingDate: "2018",
-              founder: {
-                "@type": "Person",
-                name: "Jack Kimwele",
-              },
-              contactPoint: [
-                {
-                  "@type": "ContactPoint",
-                  telephone: "+254-721-489-755",
-                  contactType: "Customer Service",
-                  areaServed: "KE",
-                  availableLanguage: ["English", "Swahili"],
-                },
-                {
-                  "@type": "ContactPoint",
-                  telephone: "+254-722-240086",
-                  contactType: "Depot",
-                  areaServed: "KE",
-                },
-              ],
-              address: [
-                {
-                  "@type": "PostalAddress",
-                  addressCountry: "KE",
-                  addressLocality: "Nairobi",
-                  postalCode: "00100",
-                  streetAddress: "P.O. Box 26806",
-                },
-                {
-                  "@type": "PostalAddress",
-                  addressCountry: "KE",
-                  addressLocality: "Matuu Town",
-                  addressRegion: "Machakos County",
-                  streetAddress: "Along Mwingi - Garissa Rd",
-                },
-              ],
-              sameAs: [
-                "https://web.facebook.com/barakagasltd",
-                "https://x.com/BarakaGas",
-                "https://www.instagram.com/p/B8blFOhFqy0",
-                "https://www.linkedin.com/company/baraka-gas-ltd",
-              ],
-            }),
-          }}
-        />
+
+        <OrganizationSchema />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

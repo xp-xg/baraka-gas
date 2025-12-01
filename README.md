@@ -76,6 +76,13 @@ baraka-gas-ltd/
 - ✅ **Call-to-Action Sections**: Unique CTAs on every page
 - ✅ **Responsive Design**: Mobile-first approach
 
+### SEO & Performance
+- ✅ **JSON-LD Structured Data**: Schema.org markup for search engines
+  - Organization, LocalBusiness, Product, FAQ, Breadcrumb schemas
+  - Enhanced search visibility and rich snippets
+- ✅ **Sitemap & Robots.txt**: Complete SEO configuration
+- ✅ **Open Graph Images**: Social media optimization
+
 ## 🚦 Getting Started
 
 ### Prerequisites
@@ -107,9 +114,13 @@ See [`task.md`](/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/
 
 **High Priority:**
 - [ ] Create actual PDFs (templates in `/public/downloads/README.md`)
+  - *Requires: Real EPRA/KEBS certificates, professional design tools*
 - [x] Add FAQ section to Contact page
 - [x] Add Call-to-Action sections to all pages
-- [ ] Implement JSON-LD structured data for SEO
+- [x] Implement JSON-LD structured data for SEO
+  - ✅ Organization schema (global)
+  - ✅ LocalBusiness, Product, FAQ, Breadcrumb components ready
+  - 📝 See `/components/seo/` for integration examples
 
 **Medium Priority:**
 - [ ] Accessibility audit (WCAG 2.1 AA)

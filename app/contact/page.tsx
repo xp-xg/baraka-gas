@@ -18,6 +18,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 const formSchema = z.object({
     name: z.string().min(2, {
