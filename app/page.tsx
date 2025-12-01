@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { Hero } from "@/components/home/hero";
 import { TrustBar } from "@/components/home/trust-bar";
 import { ServiceHighlights } from "@/components/home/service-highlights";
@@ -24,12 +26,12 @@ export default function Home() {
             Join thousands of happy customers who trust us for their daily energy needs. Safe, affordable, and reliable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary text-black font-bold py-3 px-8 rounded-md hover:bg-primary/90 transition-colors">
-              Order Now
-            </button>
-            <button className="bg-transparent border border-white text-white font-bold py-3 px-8 rounded-md hover:bg-white/10 transition-colors">
-              Contact Sales
-            </button>
+            <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Link href="/quote">Order Now</Link>
+            </Button>
+            <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
+              <Link href="/contact">Contact Sales</Link>
+            </Button>
           </div>
         </div>
       </section>

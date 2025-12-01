@@ -9,6 +9,7 @@ The Baraka Gas Portal has been successfully rebuilt as a modern, industry-compli
 
 ### Core Stack
 - **Framework**: Next.js 15 (App Router) with TypeScript
+- **Hosting**: Firebase Hosting (Static Export)
 - **Styling**: Tailwind CSS 4 + Shadcn/UI components
 - **Animations**: Framer Motion for smooth transitions
 - **Theming**: System-aware Dark Mode via next-themes
@@ -19,6 +20,7 @@ The Baraka Gas Portal has been successfully rebuilt as a modern, industry-compli
 - Image optimization with Next.js Image component
 - Code splitting via App Router
 - Fast page transitions
+- Static Export for edge delivery
 
 ---
 
@@ -37,6 +39,7 @@ Replaced all placeholders with actual company assets:
 - **Hero Background**: `public/images/hero-bg.jpg`
 - **Products**: Cylinder photos (6kg, 13kg, 50kg)
 - **Infrastructure**: Fleet, bulk storage, refill station, team photos
+- **Industrial**: Real industrial installation image on Bulk LPG page
 
 ---
 
@@ -55,10 +58,14 @@ Replaced all placeholders with actual company assets:
 ### Products (`app/products/page.tsx`)
 - **Interactive Cylinder Showcase**: 3D-style rotation with drag
 - Real product images for 6kg, 13kg, 50kg cylinders
-- Accessories grid
+- **Accessories Grid** ⭐: 8 items with real images/SVGs
+  - High Pressure Regulator, Hose Pipe, 2-Burner Stove, Gas Lighter
+  - Gas Cylinder Trolley, Leak Detector, Cylinder Stand, Burner Head
+  - "Enquire" buttons linked to Quote page
 
 ### Bulk LPG (`app/bulk-lpg/page.tsx`)
-- **Specialized Industrial Commodities** ⭐: Propane, Butane, Propylene
+- **Industrial Installation Image** ⭐: High-quality facility photo
+- **Specialized Industrial Commodities**: Propane, Butane, Propylene
 - Savings calculator
 - B2B-focused messaging
 
@@ -69,6 +76,13 @@ Replaced all placeholders with actual company assets:
   - Technical Manuals (Installation, Maintenance, Specs)
   - Compliance (EPRA License, KEBS Cert, Corporate Profile)
 
+### Quote / Order (`app/quote/page.tsx`)
+- **Smart Form Wizard** ⭐:
+  - Step 1: Customer Type (Home, Business, **Accessories**)
+  - Step 2: Dynamic fields based on type (Cylinder qty vs Accessory dropdown)
+  - Step 3: Contact details
+- **Accessories Support**: Dedicated flow for ordering parts
+
 ### About (`app/about/page.tsx`)
 - Company story (Founded 2018 by Jack Kimwele)
 - Mission statement
@@ -78,6 +92,7 @@ Replaced all placeholders with actual company assets:
 - Dual locations: Nairobi Head Office + Matuu Depot
 - Complete contact details (phone, email, hours)
 - Contact form with validation
+- **FAQ Section**: Dedicated page/section for common questions
 
 ---
 
@@ -143,10 +158,16 @@ Replaced all placeholders with actual company assets:
 - Robots.txt configuration
 - Page-specific metadata
 - Favicon integration
+- **Open Graph Image**: `app/opengraph-image.jpg` (Baraka Gas Logo)
+
+### SEO Preview
+When shared on social media, the link will display:
+- **Title**: `Baraka Gas Ltd | Energy for Life`
+- **Description**: `Leading provider of safe, reliable, and affordable LPG solutions in Kenya. Order now for fast delivery.`
+- **Image**: Baraka Gas Logo (`/opengraph-image.jpg`)
 
 ### Remaining (See implementation_plan.md)
 - JSON-LD structured data
-- Open Graph meta tags
 - Image optimization with blur-up
 
 ---
@@ -162,28 +183,27 @@ npm run dev
 - **Homepage** (`http://localhost:3000`):
   - ✅ Emergency banner visible at top
   - ✅ Stats counter animates on scroll
-  - ✅ Testimonials display correctly
-  - ✅ "What Makes Us Special" uses real images
+  - ✅ "Order Online" button in navbar links to `/quote`
 
 - **Products** (`http://localhost:3000/products`):
   - ✅ Cylinder images load correctly
-  - ✅ 3D rotation works on drag
+  - ✅ Accessories grid shows 8 items with images
+  - ✅ "Enquire" buttons work
 
 - **Bulk LPG** (`http://localhost:3000/bulk-lpg`):
-  - ✅ Propane/Butane/Propylene section visible
+  - ✅ Industrial installation image visible
+
+- **Quote** (`http://localhost:3000/quote`):
+  - ✅ Select "Accessories" -> see product dropdown
 
 - **Safety** (`http://localhost:3000/safety`):
   - ✅ Download center has 3 tabs
-  - ✅ 9 documents listed (download links functional when PDFs added)
 
-- **Footer** (all pages):
-  - ✅ EPRA and KEBS badges visible
-  - ✅ Developer credit (XP-XG) subtle gray, yellow on hover
-
-### 3. Mobile Testing
-- Test on viewport widths: 375px, 768px, 1024px
-- Verify emergency banner doesn't overlap content
-- Check FAB positioning and functionality
+### 3. Firebase Deployment
+```bash
+npm run deploy
+```
+- Verify site loads at `https://baraka-gas.web.app`
 
 ---
 
@@ -195,11 +215,13 @@ npm run dev
 - Real asset integration
 - Branding implementation
 - Download center structure
+- **FAQ Page**
+- **Firebase Hosting Setup**
+- **Accessories & Quote Integration**
 
 ### Pending 📋
 - **High Priority**:
   - Create actual PDFs (templates ready)
-  - Add FAQ section
   - Implement JSON-LD structured data
 
 - **Medium Priority**:

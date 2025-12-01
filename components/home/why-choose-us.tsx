@@ -8,7 +8,7 @@ const highlights = [
     {
         title: "BARAKA GAS ROAD DELIVERY",
         description: "Our service goes beyond simply delivering goods when asked, it includes offering a wide selection and choice from stock of reliable products with guaranteed quality and continuity of supply.",
-        image: "/images/road-delivery.jpg",
+        image: "/images/Baraka gas road delivery1.jpeg",
     },
     {
         title: "STATE OF ART REFILL STATION",
@@ -18,7 +18,7 @@ const highlights = [
     {
         title: "EXTENSIVE FLEET",
         description: "Well-maintained delivery vehicles with GPS tracking, ensuring timely and secure transportation of LPG to your location.",
-        image: "/images/fleet.jpg",
+        image: "/images/Baraka gas extensive fleet1.jpeg",
     },
     {
         title: "BULK STORAGE FACILITIES",

@@ -27,7 +27,7 @@ const cylinders = [
         name: "50kg Cylinder",
         price: "KSh 9,500 (Refill)",
         description: "Designed for commercial use, hotels, and restaurants.",
-        image: "/images/cylinder-50kg.jpg",
+        image: "/images/baraka gas 50kgs cylinder1.jpeg",
     },
 ];
 

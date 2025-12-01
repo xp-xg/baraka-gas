@@ -131,7 +131,7 @@ export default function ServicesPage() {
                         <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
                             <Link href="/quote">Get a Quote</Link>
                         </Button>
-                        <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white/10">
+                        <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                             <Link href="/contact">Contact Sales</Link>
                         </Button>
                     </div>
@@ -216,7 +216,7 @@ export default function ServicesPage() {
                         <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
                             <Link href="/quote">Request a Quote</Link>
                         </Button>
-                        <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white/10">
+                        <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                             <Link href="/contact">Contact Us</Link>
                         </Button>
                     </div>

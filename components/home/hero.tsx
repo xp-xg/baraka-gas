@@ -31,8 +31,8 @@ export function Hero() {
         <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden flex items-center justify-center">
             {/* Background Video/Gradient Placeholder */}
             <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-                <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
 
             <div className="container relative z-10 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
@@ -71,7 +71,7 @@ export function Hero() {
                                 Order Now <ArrowRight className="ml-2 w-5 h-5" />
                             </a>
                         </Button>
-                        <Button size="lg" variant="outline" className="text-white border-white/20 hover:bg-white/10 text-lg h-12 px-8" asChild>
+                        <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg h-12 px-8" asChild>
                             <a href="/locator">
                                 Find a Dealer
                             </a>

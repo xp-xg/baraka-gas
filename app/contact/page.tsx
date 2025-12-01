@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -307,6 +308,26 @@ export default function ContactPage() {
                     </div>
                 </div>
             </div>
+
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-r from-blue-900 to-slate-900 text-white">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                        Need Gas Now?
+                    </h2>
+                    <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                        Don't wait! Order your LPG cylinder online and get it delivered to your doorstep quickly and safely.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            <Link href="/quote">Quick Order</Link>
+                        </Button>
+                        <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
+                            <Link href="/products">Browse Products</Link>
+                        </Button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

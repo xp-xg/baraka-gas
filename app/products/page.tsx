@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { CylinderShowcase } from "@/components/products/cylinder-showcase";
 import { AccessoriesGrid } from "@/components/products/accessories-grid";
 
@@ -19,6 +21,26 @@ export default function ProductsPage() {
             </div>
 
             <AccessoriesGrid />
+
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                        Ready to Order?
+                    </h2>
+                    <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                        Get your LPG cylinders and accessories delivered straight to your door. Order now or find your nearest dealer.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            <Link href="/quote">Order Now</Link>
+                        </Button>
+                        <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
+                            <Link href="/locator">Find Nearest Dealer</Link>
+                        </Button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

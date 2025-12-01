@@ -15,6 +15,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://baraka-gas.web.app"),
   title: "Baraka Gas Ltd | Energy for Life",
   description: "Official corporate portal for Baraka Gas Ltd. Order LPG, find dealers, and learn about safety. Leading provider of safe, reliable, and affordable LPG solutions in Kenya.",
   keywords: ["LPG", "Baraka Gas", "Kenya", "Gas cylinders", "Propane", "Butane", "Energy", "Cooking gas"],
@@ -31,20 +32,11 @@ export const metadata: Metadata = {
     title: "Baraka Gas Ltd | Energy for Life",
     description: "Leading provider of safe, reliable, and affordable LPG solutions in Kenya. Order now for fast delivery.",
     siteName: "Baraka Gas Ltd",
-    images: [
-      {
-        url: "/images/hero-bg.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Baraka Gas - Energy for Life",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Baraka Gas Ltd | Energy for Life",
     description: "Leading provider of safe, reliable, and affordable LPG solutions in Kenya.",
-    images: ["/images/hero-bg.jpg"],
     creator: "@BarakaGas",
   },
 };

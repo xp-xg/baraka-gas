@@ -1,6 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
+import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ShieldCheck, Truck, Users, Leaf } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -91,6 +93,25 @@ export default function AboutPage() {
                     </Card>
                 ))}
             </div>
+
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white relative overflow-hidden mt-20">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599690964299-cd85e3d4dbd7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10" />
+                <div className="container relative z-10 mx-auto px-4 text-center">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6">Join the Baraka Gas Family</h2>
+                    <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                        Experience reliable energy solutions backed by our commitment to safety and customer satisfaction.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            <Link href="/quote">Order Your First Cylinder</Link>
+                        </Button>
+                        <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
+                            <Link href="/services">Explore Our Services</Link>
+                        </Button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

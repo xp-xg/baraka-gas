@@ -142,6 +142,26 @@ export default function BulkLPGPage() {
                     </div>
                 </div>
             </section>
+
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-r from-blue-900 to-slate-900 text-white">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                        Ready to Power Your Business?
+                    </h2>
+                    <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                        Get a customized bulk LPG solution tailored to your business needs. Start saving today with our competitive pricing.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            <a href="/quote">Get Custom Quote</a>
+                        </Button>
+                        <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
+                            <a href="/contact">Schedule Consultation</a>
+                        </Button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

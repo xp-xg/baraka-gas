@@ -80,8 +80,9 @@ baraka-gas-ltd/
 ### Prerequisites
 - Node.js 18+ 
 - npm/yarn/pnpm
+- Firebase CLI (`npm install -g firebase-tools`)
 
-### Installation
+### Installation & Deployment
 
 ```bash
 # Install dependencies
@@ -93,8 +94,8 @@ npm run dev
 # Build for production
 npm run build
 
-# Start production server
-npm start
+# Deploy to Firebase
+npm run deploy
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
@@ -105,7 +106,7 @@ See [`task.md`](/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/
 
 **High Priority:**
 - [ ] Create actual PDFs (templates in `/public/downloads/README.md`)
-- [ ] Add FAQ section to Contact page
+- [x] Add FAQ section to Contact page
 - [ ] Implement JSON-LD structured data for SEO
 
 **Medium Priority:**
