@@ -73,6 +73,7 @@ baraka-gas-ltd/
 - ✅ **Dark Mode**: System-aware theme switching
 - ✅ **Floating Action Button**: Quick access to WhatsApp, Call, App Install
 - ✅ **Interactive Product Showcase**: 3D-style cylinder rotation
+- ✅ **Call-to-Action Sections**: Unique CTAs on every page
 - ✅ **Responsive Design**: Mobile-first approach
 
 ## 🚦 Getting Started
@@ -107,6 +108,7 @@ See [`task.md`](/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/
 **High Priority:**
 - [ ] Create actual PDFs (templates in `/public/downloads/README.md`)
 - [x] Add FAQ section to Contact page
+- [x] Add Call-to-Action sections to all pages
 - [ ] Implement JSON-LD structured data for SEO
 
 **Medium Priority:**

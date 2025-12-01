@@ -242,6 +242,38 @@ See [`task.md`](file:///home/tab/.gemini/antigravity/brain/ce912608-5342-4553-9b
 
 ---
 
+## 🆕 Recent Updates (December 2025)
+
+### Image Updates
+Updated 3 uploaded images:
+- **Road Delivery**: `Baraka gas road delivery1.jpeg` in "What Makes Us Special?"
+- **Extensive Fleet**: `Baraka gas extensive fleet1.jpeg` in "What Makes Us Special?"
+- **50kg Cylinder**: `baraka gas 50kgs cylinder1.jpeg` in Products showcase
+
+### Hero Section Improvements
+- Increased background image opacity from 30% to 50%
+- Fixed "Find Dealer" button visibility (solid white background)
+- Improved overall contrast and readability
+
+### CTA Sections Added
+Added unique call-to-action sections to 6 additional pages:
+1. **About**: "Join the Baraka Gas Family"
+2. **Products**: "Ready to Order?"
+3. **Bulk LPG**: "Ready to Power Your Business?"
+4. **Safety**: "Experience Safe & Reliable Service"
+5. **Contact**: "Need Gas Now?"
+6. **Locator**: "Prefer Home Delivery?"
+
+### Button Visibility Fixes
+- Fixed all secondary CTA buttons across site
+- Changed from outline variant to solid white backgrounds
+- All buttons now visible without hover
+- Fixed home page CTA button navigation
+
+**Commit**: `d84dd52` | **Files Modified**: 11
+
+---
+
 ## 📞 Support
 
 For questions or issues:
