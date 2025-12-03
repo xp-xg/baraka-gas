@@ -11,21 +11,21 @@ const cylinders = [
     {
         id: "6kg",
         name: "6kg Cylinder",
-        price: "KSh 1,200 (Refill)",
+        price: "Contact for Today's Rate",
         description: "Perfect for small families and light cooking. Portable and efficient.",
         image: "/images/cylinder-6kg.jpg",
     },
     {
         id: "13kg",
         name: "13kg Cylinder",
-        price: "KSh 2,800 (Refill)",
+        price: "Contact for Today's Rate",
         description: "Ideal for medium to large families. Long-lasting and economical.",
         image: "/images/cylinder-13kg.jpg",
     },
     {
         id: "50kg",
         name: "50kg Cylinder",
-        price: "KSh 9,500 (Refill)",
+        price: "Contact for Today's Rate",
         description: "Designed for commercial use, hotels, and restaurants.",
         image: "/images/baraka gas 50kgs cylinder1.jpeg",
     },
@@ -88,6 +88,15 @@ export function CylinderShowcase() {
                                     <Button variant="outline" size="lg" className="w-full md:w-auto text-lg">
                                         Buy New Cylinder
                                     </Button>
+                                </div>
+
+                                <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                    <p className="font-semibold text-center mb-2">Call to Order:</p>
+                                    <div className="flex flex-col sm:flex-row justify-center gap-4 text-center">
+                                        <a href="tel:+254722240086" className="text-primary font-bold text-lg hover:underline">+254 722 240086</a>
+                                        <span className="hidden sm:inline text-slate-300">|</span>
+                                        <a href="tel:+254733216074" className="text-primary font-bold text-lg hover:underline">+254 733 216074</a>
+                                    </div>
                                 </div>
 
                                 <Card className="bg-slate-50 border-none">

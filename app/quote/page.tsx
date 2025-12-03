@@ -10,6 +10,8 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+import { sendEmail } from "@/lib/email-service";
+
 const steps = [
     { id: 1, title: "Customer Type" },
     { id: 2, title: "Usage Details" },
@@ -18,27 +20,50 @@ const steps = [
 
 export default function QuotePage() {
     const [currentStep, setCurrentStep] = React.useState(1);
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
     const [formData, setFormData] = React.useState({
         type: "home",
         usage: "",
         name: "",
         email: "",
         phone: "",
+        location: "",
     });
 
     const nextStep = () => setCurrentStep((prev) => Math.min(prev + 1, 3));
     const prevStep = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle submission logic here
-        console.log("Quote request submitted:", formData);
+        setIsSubmitting(true);
 
-        // Show success message
-        alert("✅ Quote request submitted successfully! Our team will contact you within 24 hours.");
+        try {
+            await sendEmail({
+                from_name: formData.name,
+                from_email: formData.email,
+                phone: formData.phone,
+                subject: `New Quote Request: ${formData.type.toUpperCase()}`,
+                message: `
+                    Customer Type: ${formData.type}
+                    Usage/Product: ${formData.usage}
+                    Location: ${formData.location}
+                `,
+                to_name: "Baraka Gas Sales",
+                // Additional fields for template
+                customer_type: formData.type,
+                usage_details: formData.usage,
+                location: formData.location
+            });
 
-        // Optional: Reset form or redirect
-        // window.location.href = "/";
+            alert("✅ Quote request submitted successfully! Our team will contact you within 24 hours.");
+            // Reset form or redirect
+            // window.location.href = "/";
+        } catch (error) {
+            console.error("Failed to submit quote:", error);
+            alert("Failed to submit quote. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (

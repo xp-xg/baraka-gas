@@ -21,12 +21,17 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
+import { sendEmail } from "@/lib/email-service";
+
 const formSchema = z.object({
     name: z.string().min(2, {
         message: "Name must be at least 2 characters.",
     }),
     email: z.string().email({
         message: "Please enter a valid email address.",
+    }),
+    phone: z.string().min(10, {
+        message: "Please enter a valid phone number.",
     }),
     subject: z.string().min(5, {
         message: "Subject must be at least 5 characters.",
@@ -45,20 +50,31 @@ export default function ContactPage() {
         defaultValues: {
             name: "",
             email: "",
+            phone: "",
             subject: "",
             message: "",
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>) {
         setIsSubmitting(true);
-        // Simulate API call
-        setTimeout(() => {
-            console.log(values);
-            setIsSubmitting(false);
+        try {
+            await sendEmail({
+                from_name: values.name,
+                from_email: values.email,
+                phone: values.phone,
+                subject: values.subject,
+                message: values.message,
+                to_name: "Baraka Gas Team",
+            });
             setIsSuccess(true);
             form.reset();
-        }, 2000);
+        } catch (error) {
+            console.error("Failed to send message:", error);
+            alert("Failed to send message. Please check your connection or try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -199,6 +215,19 @@ export default function ContactPage() {
                                                 )}
                                             />
                                         </div>
+                                        <FormField
+                                            control={form.control}
+                                            name="phone"
+                                            render={({ field }) => (
+                                                <FormItem>
+                                                    <FormLabel>Phone Number</FormLabel>
+                                                    <FormControl>
+                                                        <Input placeholder="+254..." {...field} />
+                                                    </FormControl>
+                                                    <FormMessage />
+                                                </FormItem>
+                                            )}
+                                        />
                                         <FormField
                                             control={form.control}
                                             name="subject"
