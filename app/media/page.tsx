@@ -80,14 +80,58 @@ export default function MediaPage() {
             </div>
 
             {/* Media Contact Section */}
-            <div className="mt-16 max-w-3xl mx-auto bg-muted p-8 rounded-lg text-center">
-                <h2 className="text-2xl font-bold mb-4">Media Inquiries</h2>
-                <p className="text-muted-foreground mb-6">
-                    For press releases, media kits, or interview requests, please contact our communications team.
-                </p>
-                <div className="space-y-2">
-                    <p className="font-medium">Email: media@barakagas.com</p>
-                    <p className="font-medium">Phone: +254 700 000 001</p>
+            <div className="mt-16 max-w-3xl mx-auto">
+                <div className="bg-gradient-to-r from-primary to-primary/10 p-0.5 rounded-lg">
+                    <div className="bg-background rounded-lg p-8">
+                        <h2 className="text-3xl font-bold mb-2 text-primary">Media Inquiries</h2>
+                        <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                            For press releases, media kits, or interview requests, please contact our communications team.
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-lg mx-auto">
+                            <div className="flex flex-col items-center justify-center p-6 bg-muted/50 rounded-lg border border-border">
+                                <div className="flex items-center gap-3 mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                    <h3 className="font-semibold text-lg">Email</h3>
+                                </div>
+                                <p className="text-center">
+                                    <a href="mailto:info@barakagas.com" className="text-primary hover:underline">
+                                        info@barakagas.com
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col items-center justify-center p-6 bg-muted/50 rounded-lg border border-border">
+                                <div className="flex items-center gap-3 mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                    <h3 className="font-semibold text-lg">Phone</h3>
+                                </div>
+                                <p className="text-center">
+                                    <a href="tel:+254721489755" className="text-primary hover:underline">
+                                        +254 721 489 755
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="mt-8 text-center">
+                            <a
+                                href="/contact"
+                                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                            >
+                                <span>General Enquiries? Contact Us</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

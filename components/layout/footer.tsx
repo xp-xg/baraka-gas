@@ -55,7 +55,7 @@ export function Footer() {
     return (
         <>
             <ToastContainer toasts={toasts} onClose={removeToast} />
-            <footer className="bg-slate-900 text-slate-200 pt-16 pb-8">
+            <footer className="bg-slate-900 text-slate-200 pt-16 pb-8 border-t-4 border-primary">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
                         {/* Brand & About */}

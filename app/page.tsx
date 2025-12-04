@@ -19,7 +19,7 @@ export default function Home() {
       <Testimonials />
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden border-t-4 border-primary/20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599690964299-cd85e3d4dbd7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10" />
         <div className="container relative z-10 mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Switch to Baraka Gas?</h2>
