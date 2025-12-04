@@ -1,11 +1,16 @@
 import emailjs from '@emailjs/browser';
 
-// TODO: Replace these with your actual EmailJS keys
-// Get them from https://dashboard.emailjs.com/admin
+// EmailJS Configuration
+// Configured with Baraka Gas EmailJS account credentials
 export const EMAILJS_CONFIG = {
-    SERVICE_ID: 'YOUR_SERVICE_ID',   // e.g., 'service_xyz'
-    TEMPLATE_ID: 'YOUR_TEMPLATE_ID', // e.g., 'template_abc'
-    PUBLIC_KEY: 'YOUR_PUBLIC_KEY',   // e.g., 'user_123'
+    SERVICE_ID: 'service_vmp05xl',
+    TEMPLATES: {
+        CONTACT: 'template_lmlehbq',      // Contact form submissions
+        DEALER_LEAD: 'template_dw2ewcm',  // Dealer locator leads
+        QUOTE: 'template_lmlehbq',        // Quote requests (using contact template for now)
+        NEWSLETTER: 'template_lmlehbq',   // Newsletter subscriptions (using contact template for now)
+    },
+    PUBLIC_KEY: '0mWwM-9KqMF1Gatqd',
 };
 
 export interface EmailData {
@@ -15,26 +20,25 @@ export interface EmailData {
     phone?: string;
     message: string;
     subject?: string;
+    location?: string;
+    orderType?: string;
+    cylinderSize?: string;
+    quantity?: string;
     [key: string]: any; // Allow additional fields for quote details
 }
 
-export const sendEmail = async (data: EmailData) => {
-    // Check if keys are configured
-    if (
-        EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID' ||
-        EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY'
-    ) {
-        console.warn('EmailJS keys are missing. Email simulation mode.');
-        return new Promise((resolve) => setTimeout(resolve, 1000));
-    }
+export const sendEmail = async (data: EmailData, templateId?: string) => {
+    // Use provided template ID or default to CONTACT template
+    const template = templateId || EMAILJS_CONFIG.TEMPLATES.CONTACT;
 
     try {
         const response = await emailjs.send(
             EMAILJS_CONFIG.SERVICE_ID,
-            EMAILJS_CONFIG.TEMPLATE_ID,
+            template,
             data,
             EMAILJS_CONFIG.PUBLIC_KEY
         );
+        console.log('Email sent successfully:', response);
         return response;
     } catch (error) {
         console.error('EmailJS Error:', error);

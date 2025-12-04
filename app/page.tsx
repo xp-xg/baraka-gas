@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { CallOrderDialog } from "@/components/common/call-order-dialog";
 import { Hero } from "@/components/home/hero";
 import { TrustBar } from "@/components/home/trust-bar";
 import { ServiceHighlights } from "@/components/home/service-highlights";
@@ -26,11 +27,11 @@ export default function Home() {
             Join thousands of happy customers who trust us for their daily energy needs. Safe, affordable, and reliable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <Link href="/quote">Order Now</Link>
-            </Button>
+            <CallOrderDialog size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              Call to Order
+            </CallOrderDialog>
             <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
-              <Link href="/contact">Contact Sales</Link>
+              <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>
         </div>

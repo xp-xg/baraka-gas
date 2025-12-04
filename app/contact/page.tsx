@@ -15,7 +15,9 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { CallOrderDialog } from "@/components/common/call-order-dialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
@@ -350,9 +352,9 @@ export default function ContactPage() {
                         Don't wait! Order your LPG cylinder online and get it delivered to your doorstep quickly and safely.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Link href="/quote">Quick Order</Link>
-                        </Button>
+                        <CallOrderDialog size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            Call to Order
+                        </CallOrderDialog>
                         <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                             <Link href="/products">Browse Products</Link>
                         </Button>

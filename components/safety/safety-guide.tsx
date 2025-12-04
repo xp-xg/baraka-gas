@@ -43,7 +43,7 @@ export function SafetyGuide() {
 
                 <Accordion type="single" collapsible className="w-full space-y-4">
                     {safetyTips.map((tip) => (
-                        <AccordionItem key={tip.id} value={tip.id} className="border rounded-lg px-4 bg-slate-50">
+                        <AccordionItem key={tip.id} value={tip.id} className="border rounded-lg px-4 bg-slate-50 dark:bg-slate-800">
                             <AccordionTrigger className="hover:no-underline py-4">
                                 <div className="flex items-center gap-3 text-left">
                                     <tip.icon className="w-5 h-5 text-primary" />

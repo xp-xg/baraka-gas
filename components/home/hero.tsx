@@ -4,28 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-
 export function Hero() {
-    const router = useRouter();
-    const [quickOrder, setQuickOrder] = useState({
-        cylinderType: "",
-        location: "",
-        phone: "",
-    });
-
-    const handleQuickOrder = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Store data in sessionStorage for quote page
-        if (quickOrder.cylinderType && quickOrder.location && quickOrder.phone) {
-            sessionStorage.setItem("quickOrderData", JSON.stringify(quickOrder));
-            router.push("/quote");
-        }
-    };
 
     return (
         <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden flex items-center justify-center">
@@ -49,6 +28,9 @@ export function Hero() {
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight">
                             Fueling Your Life with <span className="text-primary">Energy</span> & <span className="text-destructive">Safety</span>
                         </h1>
+                        <p className="text-xl md:text-2xl text-primary font-semibold italic mt-4">
+                            Clean & Reliable Cooking Partner
+                        </p>
                     </motion.div>
 
                     <motion.p
@@ -67,8 +49,8 @@ export function Hero() {
                         className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                     >
                         <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg h-12 px-8" asChild>
-                            <a href="/quote">
-                                Order Now <ArrowRight className="ml-2 w-5 h-5" />
+                            <a href="/contact">
+                                Get in Touch <ArrowRight className="ml-2 w-5 h-5" />
                             </a>
                         </Button>
                         <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg h-12 px-8" asChild>
@@ -93,53 +75,31 @@ export function Hero() {
                                 Quick Order
                             </CardTitle>
                             <p className="text-sm text-muted-foreground">
-                                Get your gas delivered in minutes.
+                                Call us directly for instant service.
                             </p>
                         </CardHeader>
-                        <CardContent>
-                            <form onSubmit={handleQuickOrder} className="space-y-4">
-                                <div className="space-y-2">
-                                    <Label htmlFor="cylinder-type">Cylinder Size</Label>
-                                    <Select onValueChange={(val) => setQuickOrder({ ...quickOrder, cylinderType: val })} required>
-                                        <SelectTrigger id="cylinder-type">
-                                            <SelectValue placeholder="Select size" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="6kg">6kg Cylinder (Refill)</SelectItem>
-                                            <SelectItem value="13kg">13kg Cylinder (Refill)</SelectItem>
-                                            <SelectItem value="50kg">50kg Cylinder (Refill)</SelectItem>
-                                            <SelectItem value="new-6kg">6kg Cylinder (New)</SelectItem>
-                                        </SelectContent>
-                                    </Select>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <Label htmlFor="location">Delivery Location</Label>
-                                    <Input
-                                        id="location"
-                                        placeholder="Enter your estate/area"
-                                        value={quickOrder.location}
-                                        onChange={(e) => setQuickOrder({ ...quickOrder, location: e.target.value })}
-                                        required
-                                    />
-                                </div>
-
-                                <div className="space-y-2">
-                                    <Label htmlFor="phone">Phone Number</Label>
-                                    <Input
-                                        id="phone"
-                                        type="tel"
-                                        placeholder="07..."
-                                        value={quickOrder.phone}
-                                        onChange={(e) => setQuickOrder({ ...quickOrder, phone: e.target.value })}
-                                        required
-                                    />
-                                </div>
-
-                                <Button type="submit" className="w-full bg-destructive hover:bg-destructive/90 text-white text-lg h-12 mt-2">
-                                    Proceed to Order
+                        <CardContent className="space-y-4">
+                            <div className="p-4 rounded-lg bg-blue-50 dark:bg-blue-900/40 border border-blue-100 dark:border-blue-700 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                                <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-1">Bulk LPG & Inquiries</h3>
+                                <p className="text-sm text-blue-700 dark:text-blue-200 mb-2">For industrial and commercial needs</p>
+                                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" asChild>
+                                    <a href="tel:+254721489755">Call Main Office</a>
                                 </Button>
-                            </form>
+                                <p className="text-xs text-blue-600 dark:text-blue-200 mt-2 text-center font-medium hidden md:block">
+                                    📞 +254 721 489 755
+                                </p>
+                            </div>
+
+                            <div className="p-4 rounded-lg bg-orange-50 dark:bg-orange-900/40 border border-orange-100 dark:border-orange-700 hover:bg-orange-100 dark:hover:bg-orange-900/50 transition-colors">
+                                <h3 className="font-semibold text-orange-900 dark:text-orange-100 mb-1">Cylinder Refills</h3>
+                                <p className="text-sm text-orange-700 dark:text-orange-200 mb-2">For home delivery and retail</p>
+                                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white" asChild>
+                                    <a href="tel:+254722240086">Call Depot</a>
+                                </Button>
+                                <p className="text-xs text-orange-600 dark:text-orange-200 mt-2 text-center font-medium hidden md:block">
+                                    📞 +254 722 240086
+                                </p>
+                            </div>
                         </CardContent>
                     </Card>
                 </motion.div>

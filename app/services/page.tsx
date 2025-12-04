@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { CallOrderDialog } from "@/components/common/call-order-dialog";
 import {
     Home,
     Factory,
@@ -128,9 +129,9 @@ export default function ServicesPage() {
                         From residential delivery to large-scale industrial solutions, Baraka Gas provides comprehensive LPG services tailored to meet your specific energy needs.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Link href="/quote">Get a Quote</Link>
-                        </Button>
+                        <CallOrderDialog size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            Call to Order
+                        </CallOrderDialog>
                         <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                             <Link href="/contact">Contact Sales</Link>
                         </Button>
@@ -213,9 +214,9 @@ export default function ServicesPage() {
                         Contact us today to discuss your energy needs and discover how we can serve you better.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Link href="/quote">Request a Quote</Link>
-                        </Button>
+                        <CallOrderDialog size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            Call to Order
+                        </CallOrderDialog>
                         <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                             <Link href="/contact">Contact Us</Link>
                         </Button>

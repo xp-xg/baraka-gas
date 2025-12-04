@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SafetyGuide } from "@/components/safety/safety-guide";
 import { DownloadCenter } from "@/components/safety/download-center";
+import { CallOrderDialog } from "@/components/common/call-order-dialog";
 
 export default function SafetyPage() {
     return (
@@ -29,9 +30,9 @@ export default function SafetyPage() {
                         With our commitment to safety and compliance, you can trust Baraka Gas for all your LPG needs. Order now and experience the difference.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Link href="/quote">Order with Confidence</Link>
-                        </Button>
+                        <CallOrderDialog size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            Order with Confidence
+                        </CallOrderDialog>
                         <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                             <a href="#download-center">Safety Resources</a>
                         </Button>

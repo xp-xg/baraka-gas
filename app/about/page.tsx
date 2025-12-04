@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Truck, Users, Leaf } from "lucide-react";
+import { CallOrderDialog } from "@/components/common/call-order-dialog";
 
 export const metadata: Metadata = {
     title: "About Us | Baraka Gas Ltd",
@@ -39,6 +40,9 @@ export default function AboutPage() {
             {/* Hero Section */}
             <div className="text-center mb-16 max-w-3xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Powering Your Life with Clean Energy</h1>
+                <p className="text-lg text-primary font-semibold italic mb-4">
+                    Clean & Reliable Cooking Partner
+                </p>
                 <p className="text-xl text-muted-foreground">
                     Baraka Gas Ltd is dedicated to providing safe, reliable, and affordable LPG solutions to households and businesses across the region.
                 </p>
@@ -61,17 +65,17 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-4">
                     <div className="relative h-64 bg-muted rounded-2xl overflow-hidden shadow-lg">
-                        <img src="/images/fleet.jpg" alt="Baraka Gas Fleet" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                        <img src="/images/Baraka gas extensive fleet1.jpeg" alt="Baraka Gas Extensive Fleet" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                             <p className="text-white font-semibold">Extensive Delivery Fleet</p>
                         </div>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="relative h-40 bg-muted rounded-2xl overflow-hidden shadow-lg">
-                            <img src="/images/bulk-storage.jpg" alt="Bulk Storage" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                            <img src="/images/fleet.jpg" alt="Baraka Gas Fleet Operations" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div className="relative h-40 bg-muted rounded-2xl overflow-hidden shadow-lg">
-                            <img src="/images/refill-station.jpg" alt="Refill Station" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                            <img src="/images/bulk-storage.jpg" alt="Bulk Storage Facilities" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                         </div>
                     </div>
                 </div>
@@ -103,9 +107,9 @@ export default function AboutPage() {
                         Experience reliable energy solutions backed by our commitment to safety and customer satisfaction.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Link href="/quote">Order Your First Cylinder</Link>
-                        </Button>
+                        <CallOrderDialog size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            Order Your First Cylinder
+                        </CallOrderDialog>
                         <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                             <Link href="/services">Explore Our Services</Link>
                         </Button>

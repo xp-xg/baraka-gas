@@ -56,7 +56,7 @@ export function CylinderShowcase() {
                     <TabsContent key={cyl.id} value={cyl.id} className="mt-0">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                             {/* 3D View Area */}
-                            <div className="relative h-[400px] flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden cursor-grab active:cursor-grabbing perspective-1000">
+                            <div className="relative h-[400px] flex items-center justify-center bg-slate-50 dark:bg-slate-800 rounded-xl overflow-hidden cursor-grab active:cursor-grabbing perspective-1000">
                                 <motion.div
                                     style={{ rotateY, x }}
                                     drag="x"
@@ -90,7 +90,7 @@ export function CylinderShowcase() {
                                     </Button>
                                 </div>
 
-                                <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
                                     <p className="font-semibold text-center mb-2">Call to Order:</p>
                                     <div className="flex flex-col sm:flex-row justify-center gap-4 text-center">
                                         <a href="tel:+254722240086" className="text-primary font-bold text-lg hover:underline">+254 722 240086</a>
@@ -99,7 +99,7 @@ export function CylinderShowcase() {
                                     </div>
                                 </div>
 
-                                <Card className="bg-slate-50 border-none">
+                                <Card className="bg-slate-50 dark:bg-slate-800 border-none">
                                     <CardContent className="pt-6">
                                         <h4 className="font-semibold mb-2">Features:</h4>
                                         <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">

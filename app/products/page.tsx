@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CylinderShowcase } from "@/components/products/cylinder-showcase";
 import { AccessoriesGrid } from "@/components/products/accessories-grid";
+import { CallOrderDialog } from "@/components/common/call-order-dialog";
 
 export default function ProductsPage() {
     return (
@@ -32,9 +33,9 @@ export default function ProductsPage() {
                         Get your LPG cylinders and accessories delivered straight to your door. Order now or find your nearest dealer.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Link href="/quote">Order Now</Link>
-                        </Button>
+                        <CallOrderDialog size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            Order Now
+                        </CallOrderDialog>
                         <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                             <Link href="/locator">Find Nearest Dealer</Link>
                         </Button>

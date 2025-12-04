@@ -34,9 +34,14 @@ export default function BulkLPGPage() {
                         <p className="text-xl text-blue-100">
                             Reliable, cost-effective energy solutions for industries, hotels, and institutions.
                         </p>
-                        <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            Get a Quote
-                        </Button>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                                <a href="tel:+254721489755">Call Nairobi Office: +254 721 489 755</a>
+                            </Button>
+                            <Button size="lg" asChild className="bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm border border-white/20">
+                                <a href="/contact">Send Message</a>
+                            </Button>
+                        </div>
                     </div>
                     <div className="flex-1">
                         <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/20">
@@ -61,7 +66,7 @@ export default function BulkLPGPage() {
                         "Safety Audits",
                         "Remote Monitoring",
                     ].map((benefit, index) => (
-                        <div key={index} className="flex items-center gap-4 p-6 bg-slate-50 rounded-lg">
+                        <div key={index} className="flex items-center gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-lg">
                             <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
                             <span className="font-semibold text-lg">{benefit}</span>
                         </div>
@@ -89,7 +94,7 @@ export default function BulkLPGPage() {
             </section>
 
             {/* Savings Calculator */}
-            <section className="py-16 bg-slate-50">
+            <section className="py-16 bg-slate-50 dark:bg-slate-900">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <Card className="shadow-xl border-primary/20">
@@ -119,10 +124,10 @@ export default function BulkLPGPage() {
                                         </div>
                                     </div>
 
-                                    <div className="bg-blue-50 p-6 rounded-xl space-y-6">
+                                    <div className="bg-blue-50 dark:bg-slate-800 p-6 rounded-xl space-y-6">
                                         <div>
                                             <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Estimated Monthly Cost</h4>
-                                            <div className="text-4xl font-bold text-slate-900">
+                                            <div className="text-4xl font-bold text-slate-900 dark:text-white">
                                                 KSh {estimatedCost.toLocaleString()}
                                             </div>
                                             <p className="text-sm text-green-600 mt-2 font-medium">
@@ -131,8 +136,10 @@ export default function BulkLPGPage() {
                                         </div>
 
                                         <div className="pt-4 border-t border-blue-200">
-                                            <Button className="w-full" size="lg">
-                                                Request Detailed Proposal <ArrowRight className="ml-2 w-4 h-4" />
+                                            <Button className="w-full" size="lg" asChild>
+                                                <a href="/contact">
+                                                    Request Detailed Proposal <ArrowRight className="ml-2 w-4 h-4" />
+                                                </a>
                                             </Button>
                                         </div>
                                     </div>
@@ -154,10 +161,10 @@ export default function BulkLPGPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            <a href="/quote">Get Custom Quote</a>
+                            <a href="tel:+254721489755">Call Nairobi Office: +254 721 489 755</a>
                         </Button>
                         <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
-                            <a href="/contact">Schedule Consultation</a>
+                            <a href="/contact">Send Message</a>
                         </Button>
                     </div>
                 </div>

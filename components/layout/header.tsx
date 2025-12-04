@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { CallOrderDialog } from "@/components/common/call-order-dialog";
 import { cn } from "@/lib/utils";
 
 const navigation = [
@@ -74,12 +75,9 @@ export function Header() {
                     {/* Theme Toggle & CTA Button */}
                     <div className="hidden md:flex items-center gap-4">
                         <ThemeToggle />
-                        <Button
-                            className="bg-destructive hover:bg-destructive/90 text-white shadow-lg shadow-destructive/20 animate-pulse-slow"
-                            asChild
-                        >
-                            <a href="/quote">Order Online</a>
-                        </Button>
+                        <CallOrderDialog className="bg-destructive hover:bg-destructive/90 text-white shadow-lg shadow-destructive/20 animate-pulse-slow">
+                            Call to Order
+                        </CallOrderDialog>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -117,9 +115,9 @@ export function Header() {
                                     {item.name}
                                 </Link>
                             ))}
-                            <Button className="w-full bg-destructive hover:bg-destructive/90 text-white mt-4" asChild>
-                                <a href="/quote">Order Online</a>
-                            </Button>
+                            <CallOrderDialog className="w-full bg-destructive hover:bg-destructive/90 text-white mt-4">
+                                Call to Order
+                            </CallOrderDialog>
                         </div>
                     </motion.div>
                 )}

@@ -2,6 +2,8 @@
 
 Official corporate website for **Baraka Gas Ltd**, Kenya's trusted LPG provider.
 
+> *"Clean & Reliable Cooking Partner"*
+
 ## 🚀 Project Overview
 
 This is a modern, industry-standard corporate portal built with Next.js 15, featuring:
@@ -121,6 +123,11 @@ See [`task.md`](/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/
   - ✅ Organization schema (global)
   - ✅ LocalBusiness, Product, FAQ, Breadcrumb components ready
   - 📝 See `/components/seo/` for integration examples
+- [x] Update Product Page
+  - ✅ Add "Call to Order" & "Call to Enquire" with depot numbers
+  - ✅ Remove displayed prices (replaced with engagement text)
+  - ✅ Add Industrial Gas Leak Detectors (Grouped Grid View)
+- [x] Integrate EmailJS for contact forms
 
 **Medium Priority:**
 - [ ] Accessibility audit (WCAG 2.1 AA)

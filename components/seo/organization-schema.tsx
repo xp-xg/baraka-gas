@@ -6,6 +6,7 @@ export function OrganizationSchema() {
         '@type': 'Organization',
         name: 'Baraka Gas Ltd',
         legalName: 'Baraka Gas Ltd',
+        slogan: 'Clean & Reliable Cooking Partner',
         url: 'https://barakagas.com',
         logo: 'https://barakagas.com/images/logo.jpg',
         foundingDate: '2018',

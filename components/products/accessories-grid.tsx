@@ -67,7 +67,7 @@ const accessories = [
 
 export function AccessoriesGrid() {
     return (
-        <section className="py-12 bg-slate-50">
+        <section className="py-12 bg-slate-50 dark:bg-slate-900">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-10">
                     <h2 className="text-3xl font-bold mb-4">Essential Accessories</h2>
@@ -83,16 +83,16 @@ export function AccessoriesGrid() {
                                 {/* @ts-ignore - images property exists on some items */}
                                 {item.images ? (
                                     <div className="w-full h-full grid grid-rows-2 gap-2">
-                                        <div className="relative w-full h-full bg-slate-50 rounded overflow-hidden">
+                                        <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded overflow-hidden">
                                             {/* @ts-ignore */}
                                             <img src={item.images[0]} alt={item.name} className="w-full h-full object-contain p-2" />
                                         </div>
                                         <div className="grid grid-cols-2 gap-2">
-                                            <div className="relative w-full h-full bg-slate-50 rounded overflow-hidden">
+                                            <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded overflow-hidden">
                                                 {/* @ts-ignore */}
                                                 <img src={item.images[1]} alt={item.name} className="w-full h-full object-contain p-1" />
                                             </div>
-                                            <div className="relative w-full h-full bg-slate-50 rounded overflow-hidden">
+                                            <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded overflow-hidden">
                                                 {/* @ts-ignore */}
                                                 <img src={item.images[2]} alt={item.name} className="w-full h-full object-contain p-1" />
                                             </div>

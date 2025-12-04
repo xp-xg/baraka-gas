@@ -348,6 +348,18 @@ Added unique call-to-action sections to 6 additional pages:
 
 **Commits**: `d84dd52`, `3cd606f` | **Files Modified**: 17
 
+### Product Page Enhancements (Dec 3, 2025) ⭐
+- **Call-to-Order Integration**: Added direct depot numbers (`+254 722 240086`, `+254 733 216074`) to Cylinder Showcase and Accessories Grid.
+- **Price Strategy Update**: Removed fixed prices, replaced with "Contact for Today's Rate" and "Best Market Price" to encourage enquiries.
+- **Industrial Gas Leak Detectors**:
+  - Added 3 new industrial detector products.
+  - **Grouped Grid Layout**: Implemented a custom 3-image grid view for the "Industrial Gas Leak Detectors (Series)" card.
+  - Added tags: "Top Rated Series", "New Arrival".
+
+### Form Functionality
+- **EmailJS Integration**: Contact and Quote forms now send real emails using EmailJS.
+- **Send Message Button**: Added direct "Send Message" button to accessories linking to contact form.
+
 ---
 
 ## 📞 Support

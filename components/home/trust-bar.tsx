@@ -16,7 +16,7 @@ const partners = [
 
 export function TrustBar() {
     return (
-        <div className="w-full bg-slate-50 border-y border-slate-200 overflow-hidden py-4">
+        <div className="w-full bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-700 overflow-hidden py-4">
             <div className="container mx-auto px-4">
                 <div className="flex overflow-hidden relative">
                     <motion.div
@@ -37,8 +37,8 @@ export function TrustBar() {
                     </motion.div>
 
                     {/* Gradients for fade effect */}
-                    <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-50 to-transparent z-10" />
-                    <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-50 to-transparent z-10" />
+                    <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-50 dark:from-slate-900 to-transparent z-10" />
+                    <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-50 dark:from-slate-900 to-transparent z-10" />
                 </div>
             </div>
         </div>

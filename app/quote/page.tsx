@@ -67,7 +67,7 @@ export default function QuotePage() {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 py-20">
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 py-20">
             <div className="container mx-auto px-4 max-w-2xl">
                 <div className="text-center mb-10">
                     <h1 className="text-3xl font-bold mb-4">Get a Quote</h1>
@@ -80,11 +80,11 @@ export default function QuotePage() {
                 <div className="flex justify-between mb-8 relative">
                     <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -z-10" />
                     {steps.map((step) => (
-                        <div key={step.id} className="flex flex-col items-center gap-2 bg-slate-50 px-2">
+                        <div key={step.id} className="flex flex-col items-center gap-2 bg-slate-50 dark:bg-slate-900 px-2">
                             <div
                                 className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-colors ${currentStep >= step.id
                                     ? "bg-primary border-primary text-black"
-                                    : "bg-white border-slate-300 text-slate-400"
+                                    : "bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-600 text-slate-400"
                                     }`}
                             >
                                 {currentStep > step.id ? <Check className="w-6 h-6" /> : step.id}
@@ -190,7 +190,7 @@ export default function QuotePage() {
                                                     </Select>
                                                 </div>
 
-                                                <div className="p-4 bg-blue-50 rounded-lg flex gap-3 items-start">
+                                                <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex gap-3 items-start">
                                                     <Flame className="w-5 h-5 text-blue-600 mt-0.5" />
                                                     <p className="text-sm text-blue-700">
                                                         All our accessories are <strong>safety certified</strong> and come with warranty.
@@ -214,7 +214,7 @@ export default function QuotePage() {
                                                     </Select>
                                                 </div>
 
-                                                <div className="p-4 bg-blue-50 rounded-lg flex gap-3 items-start">
+                                                <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex gap-3 items-start">
                                                     <Flame className="w-5 h-5 text-blue-600 mt-0.5" />
                                                     <p className="text-sm text-blue-700">
                                                         Based on your selection, we recommend our <strong>{formData.type === 'home' ? '13kg Cylinder' : 'Bulk LPG Solution'}</strong>.
