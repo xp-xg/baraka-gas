@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "deploy": "npm run build && firebase deploy",
-    "firebase:init": "firebase login && firebase init hosting"
+    "firebase:init": "firebase login && firebase init hosting",
+    "deploy:directadmin": "npm run build && echo '\n✅ Build complete! Upload the out/ folder to your DirectAdmin public_html directory.\nSee DIRECTADMIN_DEPLOYMENT.md for detailed instructions.'"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

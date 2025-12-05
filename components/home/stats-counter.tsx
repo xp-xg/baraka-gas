@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import { Users, Calendar, Truck, Award } from "lucide-react";
 
 const stats = [
-    { icon: Calendar, label: "Years in Business", value: 7, suffix: "+" },
-    { icon: Users, label: "Happy Customers", value: 5000, suffix: "+" },
-    { icon: Truck, label: "Deliveries Monthly", value: 1200, suffix: "+" },
+    { icon: Calendar, label: "Years in Business", value: 10, suffix: "+" },
+    { icon: Users, label: "Happy Customers", value: 100000, suffix: "+" },
+    { icon: Truck, label: "Deliveries Monthly", value: 35000, suffix: "+" },
     { icon: Award, label: "Safety Record", value: 100, suffix: "%" },
 ];
 

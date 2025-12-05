@@ -92,7 +92,7 @@ baraka-gas-ltd/
 - npm/yarn/pnpm
 - Firebase CLI (`npm install -g firebase-tools`)
 
-### Installation & Deployment
+### Installation
 
 ```bash
 # Install dependencies
@@ -100,19 +100,31 @@ npm install
 
 # Run development server
 npm run dev
+```
 
-# Build for production
-npm run build
+### Deployment Options
 
-# Deploy to Firebase
+#### Option 1: DirectAdmin Hosting (Recommended for cPanel/DirectAdmin)
+
+```bash
+# Build and prepare for upload
+npm run deploy:directadmin
+```
+
+Then upload the `out/` folder contents to your server. See [DIRECTADMIN_DEPLOYMENT.md](DIRECTADMIN_DEPLOYMENT.md) for detailed instructions.
+
+#### Option 2: Firebase Hosting
+
+```bash
+# Build and deploy to Firebase
 npm run deploy
 ```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for Firebase setup instructions.
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## 📋 Remaining Tasks
-
-See [`task.md`](/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/task.md) for detailed progress tracking.
 
 **High Priority:**
 - [ ] Create actual PDFs (templates in `/public/downloads/README.md`)
@@ -136,10 +148,12 @@ See [`task.md`](/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/
 
 ## 📄 Documentation
 
-- **Task Tracking**: `/.gemini/antigravity/brain/.../task.md`
-- **Implementation Plan**: `/.gemini/antigravity/brain/.../implementation_plan.md`
-- **Walkthrough**: `/.gemini/antigravity/brain/.../walkthrough.md`
-- **PDF Templates**: `/public/downloads/README.md`
+- **Deployment Guides**: 
+  - [DirectAdmin Deployment](DIRECTADMIN_DEPLOYMENT.md) - For cPanel/DirectAdmin hosting
+  - [Firebase Deployment](DEPLOYMENT.md) - For Firebase Hosting
+- **Project Walkthrough**: [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md)
+- **EmailJS Setup**: [docs/EMAILJS_SETUP.md](docs/EMAILJS_SETUP.md)
+- **PDF Templates**: [public/downloads/README.md](public/downloads/README.md)
 
 ## 🔗 Important Links
 

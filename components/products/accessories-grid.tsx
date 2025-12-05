@@ -7,13 +7,47 @@ const accessories = [
     {
         name: "Industrial Gas Leak Detectors (Series)",
         price: "Best Market Price",
-        image: "/images/Industrial gas leak detectors.jpeg", // Fallback/Main
+        image: "/images/products/Industrial gas leak detectors.jpeg", // Fallback/Main
         images: [
-            "/images/Industrial gas leak detectors.jpeg",
-            "/images/Industrial gas leak detectors1.jpeg",
-            "/images/Industrial gas leak detectors2.jpeg"
+            "/images/products/Industrial gas leak detectors.jpeg",
+            "/images/products/Industrial gas leak detectors1.jpeg",
+            "/images/products/Industrial gas leak detectors2.jpeg"
         ],
         tag: "Top Rated Series",
+    },
+    {
+        name: "Class 300 Valve (Series)",
+        price: "Best Market Price",
+        image: "/images/products/Class 300 Valve.jpeg",
+        images: [
+            "/images/products/Class 300 Valve.jpeg",
+            "/images/products/Class 300 Valve1.jpeg"
+        ],
+        tag: "Industrial Grade",
+    },
+    {
+        name: "Emergency Shut-off Switch (EX)",
+        price: "Best Market Price",
+        image: "/images/products/EX - Emergency Shut off switch.jpeg",
+        tag: "Safety Critical",
+    },
+    {
+        name: "Emergency Breakaway Coupling",
+        price: "Best Market Price",
+        image: "/images/products/Emergency Break away coupling.jpeg",
+        tag: "Safety Essential",
+    },
+    {
+        name: "Ex-proof 2ft Double Fluorescent Tube",
+        price: "Best Market Price",
+        image: "/images/products/Ex prof 2ft double fluorescent tube.jpeg",
+        tag: "Explosion Proof",
+    },
+    {
+        name: "Ex-proof Start & Stop Switch",
+        price: "Best Market Price",
+        image: "/images/products/Ex- Start&Stop Switch.jpeg",
+        tag: "Certified Safe",
     },
     {
         name: "High Pressure Regulator",
@@ -70,9 +104,9 @@ export function AccessoriesGrid() {
         <section className="py-12 bg-slate-50 dark:bg-slate-900">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-10">
-                    <h2 className="text-3xl font-bold mb-4">Essential Accessories</h2>
+                    <h2 className="text-3xl font-bold mb-4">Essential LPG Accessories & Safety Equipment</h2>
                     <p className="text-muted-foreground">
-                        Enhance your cooking experience with our high-quality accessories.
+                        Premium quality LPG regulators, hoses, stoves, leak detectors, and industrial safety equipment for homes and businesses across Kenya.
                     </p>
                 </div>
 
@@ -85,23 +119,35 @@ export function AccessoriesGrid() {
                                     <div className="w-full h-full grid grid-rows-2 gap-2">
                                         <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded overflow-hidden">
                                             {/* @ts-ignore */}
-                                            <img src={item.images[0]} alt={item.name} className="w-full h-full object-contain p-2" />
+                                            <img
+                                                src={item.images[0]}
+                                                alt={`${item.name} - LPG industrial equipment Kenya | Baraka Gas`}
+                                                className="w-full h-full object-contain p-2"
+                                            />
                                         </div>
                                         <div className="grid grid-cols-2 gap-2">
                                             <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded overflow-hidden">
                                                 {/* @ts-ignore */}
-                                                <img src={item.images[1]} alt={item.name} className="w-full h-full object-contain p-1" />
+                                                <img
+                                                    src={item.images[1]}
+                                                    alt={`${item.name} detail view - gas safety equipment`}
+                                                    className="w-full h-full object-contain p-1"
+                                                />
                                             </div>
                                             <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded overflow-hidden">
                                                 {/* @ts-ignore */}
-                                                <img src={item.images[2]} alt={item.name} className="w-full h-full object-contain p-1" />
+                                                <img
+                                                    src={item.images[2]}
+                                                    alt={`${item.name} product view - LPG accessory Kenya`}
+                                                    className="w-full h-full object-contain p-1"
+                                                />
                                             </div>
                                         </div>
                                     </div>
                                 ) : (
                                     <img
                                         src={item.image}
-                                        alt={item.name}
+                                        alt={`${item.name} - LPG gas accessory Kenya | Baraka Gas`}
                                         className="w-full h-full object-contain p-4"
                                     />
                                 )}

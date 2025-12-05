@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPG Safety Poster - Baraka Gas Ltd</title>
+    <style>
+        body {
+            font-family: 'Arial Black', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            width: 210mm;
+            height: 297mm;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poster {
+            flex: 1;
+            background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
+            padding: 15mm;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            background: white;
+            color: #0D47A1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            color: #D32F2F;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h2 {
+            font-size: 32px;
+            margin: 0;
+            color: #0D47A1;
+        }
+
+        .content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .section {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h3 {
+            font-size: 24px;
+            margin: 0 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 4px solid #FFC107;
+            color: #0D47A1;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section li {
+            font-size: 16px;
+            margin: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .dos li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-size: 24px;
+            color: #2E7D32;
+            font-weight: bold;
+        }
+
+        .donts li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            font-size: 24px;
+            color: #D32F2F;
+            font-weight: bold;
+        }
+
+        .leak-detection {
+            grid-column: 1 / -1;
+        }
+
+        .leak-detection ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .leak-detection li {
+            background: #FFF3CD;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #D32F2F;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .leak-detection li::before {
+            content: "";
+            display: block;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .leak-detection li:nth-child(1)::before {
+            content: "👃";
+        }
+
+        .leak-detection li:nth-child(2)::before {
+            content: "👂";
+        }
+
+        .leak-detection li:nth-child(3)::before {
+            content: "👁";
+        }
+
+        .emergency {
+            grid-column: 1 / -1;
+            background: #D32F2F;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .emergency h3 {
+            color: white;
+            border-bottom-color: #FFC107;
+            font-size: 32px;
+        }
+
+        .emergency-numbers {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .emergency-numbers div {
+            background: white;
+            color: #D32F2F;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #FFC107;
+            color: #0D47A1;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+            }
+
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="poster">
+        <div class="header">
+            <h1>⚠️ LPG SAFETY GUIDELINES</h1>
+            <h2>Stay Safe with Baraka Gas</h2>
+        </div>
+
+        <div class="content">
+            <div class="section leak-detection">
+                <h3>🚨 HOW TO DETECT GAS LEAKS</h3>
+                <ul>
+                    <li>
+                        <strong>SMELL</strong><br>
+                        Rotten eggs odor<br>
+                        (added for detection)
+                    </li>
+                    <li>
+                        <strong>LISTEN</strong><br>
+                        Hissing sound<br>
+                        near cylinder/hose
+                    </li>
+                    <li>
+                        <strong>LOOK</strong><br>
+                        Bubbles in soapy water<br>
+                        at connections
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section dos">
+                <h3>✅ ALWAYS DO</h3>
+                <ul>
+                    <li>Store cylinders upright in ventilated areas</li>
+                    <li>Turn off gas when not in use</li>
+                    <li>Keep 1 meter away from heat sources</li>
+                    <li>Check for leaks monthly with soapy water</li>
+                    <li>Replace hoses every 2 years</li>
+                    <li>Use certified regulators and equipment</li>
+                    <li>Keep fire extinguisher accessible</li>
+                    <li>Ensure good kitchen ventilation</li>
+                </ul>
+            </div>
+
+            <div class="section donts">
+                <h3>❌ NEVER DO</h3>
+                <ul>
+                    <li>Use matches/lighters to detect leaks</li>
+                    <li>Store cylinders near flames or heat</li>
+                    <li>Swap gas with valve open</li>
+                    <li>Store in basements or enclosed spaces</li>
+                    <li>修Ignore gas smell - report immediately</li>
+                    <li>Drop, throw, or roll cylinders</li>
+                    <li>Use damaged or rusty cylinders</li>
+                    <li>Modify or repair cylinders yourself</li>
+                </ul>
+            </div>
+
+            <div class="section emergency">
+                <h3>🆘 IF YOU SMELL GAS</h3>
+                <ol style="text-align: left; font-size: 20px; line-height: 1.6; padding-left: 40px;">
+                    <li><strong>DON'T PANIC</strong> - No flames, no switches</li>
+                    <li><strong>TURN OFF</strong> cylinder valve immediately</li>
+                    <li><strong>VENTILATE</strong> - Open all doors and windows</li>
+                    <li><strong>EVACUATE</strong> - Leave the area if smell persists</li>
+                    <li><strong>CALL US</strong> - 24/7 emergency support below</li>
+                </ol>
+
+                <div class="emergency-numbers">
+                    <div>📞 NAIROBI<br>+254 722 240086</div>
+                    <div>📞 MATUU<br>+254 733 216074</div>
+                    <div style="grid-column: 1 / -1; background: #FFC107; color: #0D47A1; font-size: 24px;">
+                        🚨 24/7 EMERGENCY: +254 721 489 755
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            🔥 BARAKA GAS LTD - Clean & Reliable Cooking Partner 🔥<br>
+            www.barakagas.com | info@barakagas.com
+        </div>
+    </div>
+</body>
+
+</html>

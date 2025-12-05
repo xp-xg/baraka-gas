@@ -1,6 +1,7 @@
 # Firebase Deployment Guide for Baraka Gas Ltd
 
-This guide will help you deploy your Baraka Gas website to Firebase Hosting.
+This guide covers deployment to **Firebase Hosting**. For DirectAdmin/cPanel hosting, see [DIRECTADMIN_DEPLOYMENT.md](DIRECTADMIN_DEPLOYMENT.md).
+
 
 ## Prerequisites
 

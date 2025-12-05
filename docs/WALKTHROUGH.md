@@ -8,12 +8,14 @@ The Baraka Gas Portal has been successfully rebuilt as a modern, industry-compli
 ## 🏗️ Technical Architecture
 
 ### Core Stack
-- **Framework**: Next.js 15 (App Router) with TypeScript
-- **Hosting**: Firebase Hosting (Static Export)
+- **Framework**: Next.js 16 (App Router) with TypeScript
+- **Hosting Options**: 
+  - **DirectAdmin/cPanel**: Static export ready for traditional hosting
+  - **Firebase Hosting**: Static export with CDN delivery
 - **Styling**: Tailwind CSS 4 + Shadcn/UI components
 - **Animations**: Framer Motion for smooth transitions
 - **Theming**: System-aware Dark Mode via next-themes
-- **Forms**: React Hook Form + Zod validation
+- **Forms**: React Hook Form + Zod validation + EmailJS integration
 
 ### Performance Optimizations
 - Font optimization with Plus Jakarta Sans
@@ -259,11 +261,33 @@ npm run dev
 - **Safety** (`http://localhost:3000/safety`):
   - ✅ Download center has 3 tabs
 
-### 3. Firebase Deployment
+### 3. Deployment Options
+
+#### DirectAdmin/cPanel Hosting
+```bash
+# Build and prepare site for upload
+npm run deploy:directadmin
+```
+
+Then follow [DIRECTADMIN_DEPLOYMENT.md](../DIRECTADMIN_DEPLOYMENT.md) to:
+1. Backup old site via File Manager or FTP
+2. Delete old files from `public_html`
+3. Upload contents of `out/` folder to `public_html`
+4. Upload `.htaccess.template` as `.htaccess`
+5. Verify deployment
+
+**Build Output:**
+- **Size**: 11MB
+- **Pages**: 19 routes + error pages
+- **Location**: `out/` directory
+
+#### Firebase Hosting (Alternative)
 ```bash
 npm run deploy
 ```
 - Verify site loads at `https://baraka-gas.web.app`
+
+See [DEPLOYMENT.md](../DEPLOYMENT.md) for Firebase setup.
 
 ---
 
@@ -274,12 +298,14 @@ npm run deploy
 - Industry-standard compliance features
 - Real asset integration
 - Branding implementation
-- Download center structure
+- **Download center structure**
 - **FAQ Page**
 - **Firebase Hosting Setup**
+- **DirectAdmin Deployment Guide** ⭐ (NEW)
 - **Accessories & Quote Integration**
 - **Call-to-Action Sections** (All pages)
 - **JSON-LD Structured Data** (Schema components ready)
+- **EmailJS Integration** (Contact, Quote, Newsletter forms)
 
 ### Pending 📋
 - **High Priority**:
@@ -298,7 +324,7 @@ npm run deploy
   - Performance optimization (Lighthouse 90+)
   - Review/Rating aggregation for rich snippets
 
-See [`task.md`](file:///home/tab/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/task.md) and [`implementation_plan.md`](file:///home/tab/.gemini/antigravity/brain/ce912608-5342-4553-9bbd-cb675aa65ec5/implementation_plan.md) for detailed tracking.
+See project documentation in [docs/](file:///home/tab/.gemini/antigravity/scratch/baraka-gas-ltd/docs/) for detailed tracking.
 
 ---
 
@@ -311,7 +337,24 @@ See [`task.md`](file:///home/tab/.gemini/antigravity/brain/ce912608-5342-4553-9b
 
 ---
 
-## 🆕 Recent Updates (December 2025)
+## 🆕 Recent Updates
+
+### DirectAdmin Deployment Support (Dec 5, 2025) ⭐
+- **Comprehensive Deployment Guide**: Created [DIRECTADMIN_DEPLOYMENT.md](../DIRECTADMIN_DEPLOYMENT.md)
+- **Quick Deploy Script**: `npm run deploy:directadmin` builds and shows upload instructions
+- **Optimized .htaccess**: Template with HTTPS redirect, caching, compression, and security headers
+- **Build Verification**: Successfully built 11MB static site with 19 routes
+- **Upload Methods**: Detailed instructions for File Manager, FTP, and SSH
+- **Backup & Rollback**: Complete instructions for safe deployment
+
+**What's Included:**
+- Step-by-step old site removal process
+- Multiple upload options (File Manager, FTP, SSH)
+- Post-deployment verification checklist
+- Troubleshooting guide
+- Complete rollback instructions
+
+### EmailJS Integration (Previous) ⭐
 
 ### Image Updates
 Updated 3 uploaded images:
