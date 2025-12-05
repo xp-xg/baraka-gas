@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export function Hero() {
 
     return (
-        <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden flex items-center justify-center">
+        <section className="relative min-h-[90vh] h-auto py-20 w-full overflow-hidden flex items-center justify-center">
             {/* Background Video/Gradient Placeholder */}
             <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
                 <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-50" />

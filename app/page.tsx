@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Baraka Gas Ltd - Kenya's Trusted LPG Supplier",
-    description: "10+ years experience. 100,000+ happy customers. Fast delivery across Kenya. Order now!",
+    description: "10+ years experience. 100,000+ happy customers. Fast delivery across Kenya. Call +254 721 489 755 for instant service.",
     images: ["/opengraph-image.jpg"],
   },
 };

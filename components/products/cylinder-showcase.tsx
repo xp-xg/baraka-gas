@@ -27,7 +27,7 @@ const cylinders = [
         name: "50kg Cylinder",
         price: "Contact for Today's Rate",
         description: "Designed for commercial use, hotels, and restaurants.",
-        image: "/images/baraka gas 50kgs cylinder1.jpeg",
+        image: "/images/cylinder-50kg.jpeg",
     },
 ];
 

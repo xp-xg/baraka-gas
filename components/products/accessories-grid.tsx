@@ -21,7 +21,7 @@ const accessories = [
         image: "/images/products/Class 300 Valve.jpeg",
         images: [
             "/images/products/Class 300 Valve.jpeg",
-            "/images/products/Class 300 Valve1.jpeg"
+            "/images/products/Class 300 Valve12.jpeg"
         ],
         tag: "Industrial Grade",
     },
@@ -40,11 +40,11 @@ const accessories = [
     {
         name: "Ex-proof 2ft Double Fluorescent Tube",
         price: "Best Market Price",
-        image: "/images/products/Ex prof 2ft double fluorescent tube.jpeg",
+        image: "/images/products/Ex prof 2ft double fluorescent tube1.jpeg",
         tag: "Explosion Proof",
     },
     {
-        name: "Ex-proof Start & Stop Switch",
+        name: "Ex-proof Start/Stop Switch",
         price: "Best Market Price",
         image: "/images/products/Ex- Start&Stop Switch.jpeg",
         tag: "Certified Safe",

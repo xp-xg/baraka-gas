@@ -1,0 +1,11 @@
+# MINIMAL .htaccess - Use this if you're still getting 500 errors
+# This is a stripped-down version for troubleshooting
+
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+</IfModule>
+
+Options -Indexes

@@ -360,7 +360,7 @@ See project documentation in [docs/](file:///home/tab/.gemini/antigravity/scratc
 Updated 3 uploaded images:
 - **Road Delivery**: `Baraka gas road delivery1.jpeg` in "What Makes Us Special?"
 - **Extensive Fleet**: `Baraka gas extensive fleet1.jpeg` in "What Makes Us Special?"
-- **50kg Cylinder**: `baraka gas 50kgs cylinder1.jpeg` in Products showcase
+- **50kg Cylinder**: `cylinder-50kg.jpeg` in Products showcase
 
 ### Hero Section Improvements
 - Increased background image opacity from 30% to 50%

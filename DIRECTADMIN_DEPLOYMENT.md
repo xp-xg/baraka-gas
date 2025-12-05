@@ -176,6 +176,54 @@ This will build and prepare your site for upload. You'll still need to manually 
 
 ## Troubleshooting
 
+### Issue: 500 Internal Server Error
+
+**Error:** "The server encountered an internal error or misconfiguration..."
+
+**Most Common Cause:** Problematic `.htaccess` file
+
+**QUICK FIX:**
+
+1. **Test without .htaccess:**
+   - In DirectAdmin File Manager, go to `public_html`
+   - Rename `.htaccess` to `.htaccess.backup`
+   - Refresh your website
+   - If it works, the `.htaccess` was the problem
+
+2. **Use minimal .htaccess:**
+   ```apache
+   DirectoryIndex index.html
+   
+   <IfModule mod_rewrite.c>
+     RewriteEngine On
+     RewriteBase /
+   </IfModule>
+   
+   Options -Indexes
+   ```
+
+3. **Check SSL certificate:**
+   - If you DON'T have SSL, comment out HTTPS redirect rules in `.htaccess`
+   - Remove or comment these lines:
+   ```apache
+   # RewriteCond %{HTTPS} off
+   # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+   ```
+
+4. **Check DirectAdmin Error Logs:**
+   - Go to DirectAdmin → System Info & Files → Error Logs
+   - Look for the most recent error message
+   - It will tell you exactly which line in `.htaccess` is causing issues
+
+5. **Fix file permissions:**
+   - Files should be 644
+   - Directories should be 755
+   - Select all files in File Manager → Change Permissions
+
+**Solution:** Use the DirectAdmin-compatible `.htaccess` file from this repository. See `TROUBLESHOOTING_500_ERROR.md` for detailed instructions.
+
+---
+
 ### Issue: Pages show 404 errors
 
 **Solution:** 
