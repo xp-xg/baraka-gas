@@ -26,6 +26,20 @@ const documentCategories = {
             file: "/downloads/safety-poster.pdf",
             icon: Shield,
         },
+        {
+            title: "School Gas Safety Checklist",
+            description: "Daily and weekly safety checks for school laboratories.",
+            size: "0.5 MB",
+            file: "/downloads/school-safety-checklist.pdf",
+            icon: FileCheck,
+        },
+        {
+            title: "Laboratory Safety Protocol",
+            description: "Standard operating procedures for gas usage in labs.",
+            size: "1.0 MB",
+            file: "/downloads/lab-safety-protocol.pdf",
+            icon: Shield,
+        },
     ],
     technical: [
         {
@@ -90,6 +104,7 @@ export function DownloadCenter() {
                     <TabsList className="grid w-full grid-cols-2 mb-8">
                         <TabsTrigger value="safety">Safety & Emergency</TabsTrigger>
                         <TabsTrigger value="technical">Technical Manuals</TabsTrigger>
+                        {/* <TabsTrigger value="compliance">Compliance & Licenses</TabsTrigger> */}
                     </TabsList>
 
                     <TabsContent value="safety">
@@ -107,9 +122,17 @@ export function DownloadCenter() {
                             ))}
                         </div>
                     </TabsContent>
+
+                    {/* <TabsContent value="compliance">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {documentCategories.compliance.map((doc, index) => (
+                                <DocumentCard key={index} doc={doc} />
+                            ))}
+                        </div>
+                    </TabsContent> */}
                 </Tabs>
             </div>
-        </section>
+        </section >
     );
 }
 

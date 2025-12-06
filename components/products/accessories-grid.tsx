@@ -5,6 +5,12 @@ import { Badge } from "@/components/ui/badge";
 
 const accessories = [
     {
+        name: "Gas Alarm Controller",
+        price: "Best Market Price",
+        image: "/images/gasalarmcontroller.jpeg",
+        tag: "Safety Essential",
+    },
+    {
         name: "Industrial Gas Leak Detectors (Series)",
         price: "Best Market Price",
         image: "/images/products/Industrial gas leak detectors.jpeg", // Fallback/Main

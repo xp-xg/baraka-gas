@@ -14,9 +14,10 @@ const navigation = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "Products", href: "/products" },
+    { name: "Installation", href: "/services/installation-piping" },
     { name: "Bulk LPG", href: "/bulk-lpg" },
     { name: "Safety", href: "/safety" },
-    { name: "FAQ", href: "/faq" },
+    // { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
 ];
 

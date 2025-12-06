@@ -3,11 +3,11 @@ import BulkLPGPageClient from "./page-client";
 
 export const metadata: Metadata = {
     title: "Bulk LPG Supply Kenya | Industrial & Commercial LPG | Baraka Gas",
-    description: "Bulk LPG solutions for industries, hotels, restaurants & institutions in Kenya. Propane, Butane, Propylene supply. Expert installation, 24/7 support. Uninterrupted supply guaranteed. Call +254 721 489 755",
+    description: "Bulk LPG solutions for industries, hotels, restaurants & institutions in Kenya. Propane & Butane supply. Expert installation, 24/7 support. Uninterrupted supply guaranteed. Call +254 721 489 755",
     keywords: [
         // Core services
         "bulk LPG Kenya", "industrial LPG supply", "commercial LPG Kenya",
-        "bulk propane Kenya", "bulk butane supply", "propylene industrial Kenya",
+        "bulk propane Kenya", "bulk butane supply",
         // Industries  
         "hotel LPG supply", "restaurant gas supply Kenya", "industrial gas Kenya",
         "institution LPG supply", "manufacturing gas supply",

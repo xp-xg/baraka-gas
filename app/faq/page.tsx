@@ -86,6 +86,23 @@ const faqCategories = [
         ],
     },
     {
+        category: "Installation & Piping",
+        questions: [
+            {
+                question: "How long does a typical installation take?",
+                answer: "Timeline varies by project size. A standard school laboratory setup typically takes 3-5 days, while larger industrial systems may take 2-3 weeks including testing and commissioning.",
+            },
+            {
+                question: "Do you handle EPRA licensing?",
+                answer: "Yes, we handle the entire EPRA licensing process for our installations. We prepare all necessary technical drawings and documentation required for approval.",
+            },
+            {
+                question: "What are the safety requirements for a school lab?",
+                answer: "School labs require specific safety measures including gas leak detection systems, automatic shut-off valves, fume hoods, and proper ventilation. We ensure all installations meet KS and EPRA standards.",
+            },
+        ],
+    },
+    {
         category: "Account & Support",
         questions: [
             {

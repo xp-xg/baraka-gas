@@ -67,7 +67,7 @@ const services = [
             "Free site assessment",
             "Warranty included"
         ],
-        link: "/contact"
+        link: "/services/installation-piping"
     },
     {
         id: "maintenance",

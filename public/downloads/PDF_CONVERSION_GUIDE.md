@@ -10,6 +10,8 @@ The following HTML templates have been created in `/public/downloads/templates/`
 4. ✅ `safety-poster.html`
 5. ✅ `msds-lpg.html` (already existed)
 6. ✅ `emergency-response.html` (already existed)
+7. ✅ `school-safety-checklist.html` (NEW)
+8. ✅ `lab-safety-protocol.html` (NEW)
 
 ## How to Convert HTML to PDF
 
@@ -54,6 +56,8 @@ wkhtmltopdf technical-specs.html ../technical-specs.pdf
 wkhtmltopdf safety-poster.html ../safety-poster.pdf
 wkhtmltopdf msds-lpg.html ../msds-lpg.pdf
 wkhtmltopdf emergency-response.html ../emergency-response.pdf
+wkhtmltopdf school-safety-checklist.html ../school-safety-checklist.pdf
+wkhtmltopdf lab-safety-protocol.html ../lab-safety-protocol.pdf
 ```
 
 ### Option 4: Online Conversion (No Installation Required)
@@ -73,6 +77,8 @@ Place these PDFs in `/public/downloads/`:
 - ✅ `installation-manual.pdf` (3.5 MB target)
 - ✅ `maintenance-guide.pdf` (2.1 MB target)
 - ✅ `technical-specs.pdf` (1.5 MB target)
+- ✅ `school-safety-checklist.pdf` (0.5 MB target)
+- ✅ `lab-safety-protocol.pdf` (1.0 MB target)
 
 ## After Conversion
 
